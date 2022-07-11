@@ -1,0 +1,11 @@
+name: "Pb Soil Sampling"
+output_dir: "."
+navbar:
+  title: "SCEHSC"
+left:
+  - text: "Soil Sampling"
+    href: index.html
+
+output:
+  html_document:
+    theme: cosmo

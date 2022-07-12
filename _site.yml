@@ -5,7 +5,6 @@ navbar:
   left:
     - text: "Soil Sampling"
       href: index.html
-
 output:
   html_document:
     theme: cosmo

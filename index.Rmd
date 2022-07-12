@@ -234,3 +234,6 @@ leaflet(BatchesComplete)%>%
 
 ```
 
+<br>
+
+<font size="4"> Visual map of all the located soil samples and their lead concentrations color coded. This map is enabled to **scroll** and **zoom**. **Clicking** or **hovering** over the circle markers will display the average lead concentration.</font>

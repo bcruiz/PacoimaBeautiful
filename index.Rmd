@@ -204,10 +204,10 @@ BatchesComplete <- rbind(BatchesMerge, Batch_AddEdit%>%
 
 BatchesComplete <- BatchesComplete%>%
   mutate(Average = round(Average, 2),
-         AvgCat = case_when(Average < 91 ~ "<90",
-                            Average < 121 ~ "90-120",
-                            Average < 151 ~ "121-150",
-                            Average < 401 ~ "151-400"),
+         AvgCat = case_when(Average < 81 ~ "<80",
+                            Average < 200 ~ "81-199",
+                            Average < 300 ~ "200-299",
+                            Average < 400 ~ "300-399"),
          Pb_Cat = case_when(Average < 80 ~ "<80",
                             Average < 300 ~ "80-299",
                             Average < 400 ~ "300-399",
@@ -215,14 +215,14 @@ BatchesComplete <- BatchesComplete%>%
                             Average > 1000 ~ ">1000"))
 
 BatchesComplete$AvgCat <- factor(BatchesComplete$AvgCat,
-                                        levels = c("<90", "90-120", "121-150", "151-400"))
+                                        levels = c("<80", "81-199", "200-299", "300-399"))
 
-#levels = c("<80", "80-299", "300-399", "400-999", ">1000")
+#levels = c("<90", "90-120", "121-150", "151-400")
 # BatchesComplete$AvgCat <- factor(BatchesComplete$AvgCat, 
 #                                  levels = c("<80", "80-299", "300-399", "400-999", ">1000"))
 
 pal <- colorFactor(palette = c("green", "yellow", "red", "purple"), # "#FF69B4", 
-                   levels = c("<90", "90-120", "121-150", "151-400"))
+                   levels = c("<80", "81-199", "200-299", "300-399"))
 
 leaflet(BatchesComplete)%>%
     addTiles()%>%
